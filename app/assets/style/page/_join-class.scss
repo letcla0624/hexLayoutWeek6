@@ -1,0 +1,74 @@
+.teacher__class {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    border: transparent 12px solid;
+    border-top: $dark 12px solid;
+    width: 0;
+    height: 0;
+    bottom: -24px;
+    left: 49%;
+  }
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    max-width: 416px;
+    top: 28%;
+    z-index: 2;
+    &:after {
+      left: 100%;
+      transform: rotate(-90deg);
+      bottom: 49%;
+    }
+  }
+}
+.join__pad {
+  padding: 24px;
+  ul {
+    margin: auto;
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+      width: 70%;
+    }
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+      width: 100%;
+    }
+    li {
+      @include media-breakpoint-down(lg) {
+        width: 50%;
+        .btn {
+          width: 96%;
+          margin: 4px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 856px;
+    position: relative;
+    left: 25%;
+    padding: 48px 24px 48px 16%;
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: 856px;
+    position: relative;
+    left: 25%;
+    padding: 48px 24px 48px 10%;
+  }
+}
+.change-bg-color {
+  @include media-breakpoint-up(lg) {
+    background-color: $black;
+  }
+}
+.datepicker-controls {
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: $primary;
+}

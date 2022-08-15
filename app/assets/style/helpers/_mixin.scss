@@ -1,0 +1,38 @@
+@mixin text-gradient {
+  background: $gradient-text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin overlay-hover {
+  .bar {
+    width: 70px;
+    border: 1px solid $primary !important;
+    opacity: 1;
+  }
+  .material-icons {
+    color: $primary;
+  }
+  .material-icons,
+  p {
+    opacity: 1;
+  }
+  .strengths__overlay {
+    opacity: 0;
+  }
+}
+
+@mixin pay-flow {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border: 1px solid $white;
+  left: 50%;
+  z-index: -1;
+}
+
+@mixin btn-active {
+  color: $primary;
+  border-color: $primary;
+  background-color: transparent;
+}

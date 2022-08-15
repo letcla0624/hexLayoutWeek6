@@ -1,0 +1,145 @@
+$gradient-btn: linear-gradient(to right, $info, $primary);
+$gradient-text: linear-gradient($info, $primary);
+$gradient-line: linear-gradient(to left, $info 50%, $primary 50%);
+$cubeWidth: 10px;
+$cubePosition: calc(-10px / 2);
+
+.btn:focus,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.btn-gradient {
+  background: $gradient-btn;
+  border: none;
+  color: $white;
+}
+.border-gradient {
+  width: 100%;
+  height: 2px;
+  background: $gradient-line;
+}
+.text-gradient {
+  @include text-gradient;
+}
+.navbar-brand {
+  width: 24px;
+  @include media-breakpoint-up(md) {
+    width: 174.42px;
+    img {
+      content: url("../images/logo.svg");
+    }
+  }
+}
+.cube {
+  position: absolute;
+  width: $cubeWidth;
+  height: $cubeWidth;
+  &__lt {
+    left: $cubePosition;
+    top: $cubePosition;
+  }
+  &__rt {
+    right: $cubePosition;
+    top: $cubePosition;
+  }
+  &__lb {
+    left: $cubePosition;
+    bottom: $cubePosition;
+  }
+  &__rb {
+    right: $cubePosition;
+    bottom: $cubePosition;
+  }
+}
+.w-20px {
+  width: 20px;
+}
+.h-20px {
+  height: 20px;
+}
+.w-24px {
+  width: 24px;
+}
+.w-32px {
+  width: 32px;
+}
+.h-32px {
+  height: 32px;
+}
+.w-50px {
+  width: 50px;
+}
+.w-100px {
+  width: 100px;
+}
+.h-100px {
+  height: 100px;
+}
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  &__2 {
+    -webkit-line-clamp: 2;
+  }
+  &__3 {
+    -webkit-line-clamp: 3;
+  }
+}
+.z-index-0 {
+  z-index: 0;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.scroll-class {
+  width: 100%;
+  overflow-x: scroll;
+}
+.buttonsUl {
+  li.active {
+    .btn {
+      @include btn-active;
+    }
+  }
+}
+.hot__class {
+  &:hover {
+    outline: 1px solid $primary;
+    border-radius: 24px;
+  }
+}
+.z-index-up {
+  z-index: 1;
+}
+.payflow {
+  &:after {
+    @include pay-flow;
+  }
+  &__finished {
+    &:after {
+      @include pay-flow;
+      border-color: $primary;
+    }
+  }
+}
+.other__login {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    border: 0.5px solid $secondary;
+    left: 0;
+    top: 10px;
+  }
+  p {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+  }
+}
+.btn-close {
+  top: 4px;
+}
