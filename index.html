@@ -1,9 +1,53 @@
----
-title: 程式家教 Coding Home
-layout: ./app/layout.ejs
-engine: ejs
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    程式家教 Coding Home
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="bg-dark sticky-top">
+    <div class="container">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/logo2.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="material-icons fs-1 text-gradient">drag_handle</span>
+        </button>
+        <div class="collapse navbar-collapse py-3 py-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item index">
+              <a class="nav-link py-2d5 py-lg-auto" aria-current="page" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item classes ms-lg-4d5">
+              <a class="nav-link py-2d5 py-lg-auto" href="classes.html">課程介紹</a>
+            </li>
+            <li class="nav-item  ms-lg-4d5">
+              <a class="nav-link py-2d5 py-lg-auto d-flex justify-content-center" data-bs-toggle="modal"
+                data-bs-target="#loginModal">
+                <span class="material-icons me-1d5">face</span>
+                登入
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-gradient"></div>
+  </nav>
+
+  
 <main>
   <div class="bg-black">
     <div class="container banner d-flex justify-content-center align-items-center">
@@ -393,3 +437,59 @@ engine: ejs
     </div>
   </div>
 </main>
+
+    <footer class="footer bg-dark">
+      <div class="text-center py-4">
+        <p class="text-gray-light">Coding Home © 2022 All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 px-4 pt-4 pb-4d5 position-relative">
+          <div class="modal-body p-lg-0">
+            <h5 class="modal-title text-center fs-4 mb-4 mt-4d5 mt-lg-0" id="loginModalLabel">登入</h5>
+            <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+            <form class="row gy-4">
+              <div class="col-12 text-white">
+                <label for="email" class="form-label text-secondary">信箱</label>
+                <input type="email" class="form-control" id="email" placeholder="請輸入信箱">
+              </div>
+              <div class="col-12 text-white">
+                <label for="password" class="form-label text-secondary">密碼</label>
+                <input type="password" class="form-control" id="password" placeholder="請輸入密碼">
+              </div>
+              <div class="col-12">
+                <!-- <input type="submit" class="btn btn-gradient w-100" value="登入"> -->
+                <a href="join-class.html" class="btn btn-gradient w-100">登入</a>
+              </div>
+              <div class="col-12">
+                <div class="other__login text-secondary mt-4 mb-3 mt-lg-5">
+                  <p class="bg-dark px-3 mx-auto">其他登入方式</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <a href="#" class="btn btn-outline-light w-100 mb-3">
+                  <img src="./assets/images/icon_fb.svg" alt="Facebook 登入" class="w-24px me-4d2">
+                  Facebook 登入
+                </a>
+                <a href="#" class="btn btn-outline-light w-100">
+                  <img src="./assets/images/icon_google.svg" alt="Google 登入" class="w-24px me-4d2">
+                  Google 登入
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
