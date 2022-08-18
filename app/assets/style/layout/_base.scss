@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Noto+Sans+TC:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|");
 
 html,
 body {
@@ -34,12 +34,5 @@ main {
   }
   @media (max-width: 395px) {
     min-height: calc(100vh - 58px - 96px);
-  }
-}
-nav {
-  li.active {
-    a {
-      color: $primary;
-    }
   }
 }

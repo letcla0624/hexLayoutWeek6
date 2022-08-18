@@ -4,6 +4,9 @@ $gradient-line: linear-gradient(to left, $info 50%, $primary 50%);
 $cubeWidth: 10px;
 $cubePosition: calc(-10px / 2);
 
+.font-Noto {
+  font-family: "Noto Sans TC", sans-serif;
+}
 .btn:focus,
 .navbar-toggler:focus {
   box-shadow: none;
@@ -30,6 +33,25 @@ $cubePosition: calc(-10px / 2);
     }
   }
 }
+.nav-link {
+  color: $white;
+}
+nav {
+  .border-gradient {
+    position: fixed;
+    top: 58px;
+    @include media-breakpoint-up(sm) {
+      top: 65px;
+    }
+    @include media-breakpoint-up(md) {
+      top: 68px;
+    }
+    @include media-breakpoint-up(lg) {
+      top: 72px;
+    }
+  }
+}
+
 .cube {
   position: absolute;
   width: $cubeWidth;
@@ -96,6 +118,7 @@ $cubePosition: calc(-10px / 2);
 .scroll-class {
   width: 100%;
   overflow-x: scroll;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .buttonsUl {
   li.active {
