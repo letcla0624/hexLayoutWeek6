@@ -27,4 +27,21 @@ if (path_name === "" || path_name === "index") {
 } else if (path_name === "classes" || path_name === "class-intro") {
   classes.classList.add("active");
 }
+
+var mySwiper = document.querySelector(".mySwiper");
+
+if (mySwiper) {
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    loop: true,
+    navigation: {
+      nextEl: ".material-icons-next",
+      prevEl: ".material-icons-prev"
+    },
+    pagination: {
+      el: ".material-icons-pagination",
+      clickable: true
+    }
+  });
+}
 //# sourceMappingURL=all.js.map

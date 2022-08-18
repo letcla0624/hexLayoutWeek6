@@ -17168,8 +17168,16 @@ nav li.active a {
   display: block;
 }
 
+.add__us {
+  max-width: 966px;
+}
+
+.add__us .material-icons {
+  font-size: 100px;
+}
+
 .bg-slider {
-  background: url(../images/bg_share.jpg) 50% 50% no-repeat;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true) 50% 50% no-repeat;
   background-size: cover;
 }
 
@@ -17181,7 +17189,15 @@ nav li.active a {
 
 .slider__content {
   position: relative;
+  margin: auto;
   max-width: 913px;
+  padding-left: 12px;
+}
+
+@media (min-width: 992px) {
+  .slider__content {
+    padding-bottom: 52px;
+  }
 }
 
 .slider__img {
@@ -17208,6 +17224,8 @@ nav li.active a {
   border: 1px solid #fff;
   border-radius: 24px;
   z-index: 0;
+  left: 0;
+  bottom: 0;
   left: -8px;
   bottom: -8px;
 }
@@ -17236,30 +17254,17 @@ nav li.active a {
 }
 
 .slider__controller {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 @media (min-width: 992px) {
   .slider__controller {
     max-width: 525px;
-    margin-top: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 23%;
+    z-index: 2;
   }
-}
-
-.slider__controller__circle {
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  margin-top: 8px;
-  background-color: #62db54;
-}
-
-.slider__controller li {
-  height: 24px;
-}
-
-.slider__controller li.active .slider__controller__circle {
-  width: 16px;
 }
 
 .avator {
@@ -17279,12 +17284,30 @@ nav li.active a {
   }
 }
 
-.add__us {
-  max-width: 966px;
+.swiper-wrapper {
+  height: auto;
 }
 
-.add__us .material-icons {
-  font-size: 100px;
+.swiper-fade .swiper-slide {
+  opacity: 0 !important;
+}
+
+.swiper-fade .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #62db54;
+  opacity: 1;
+  border-radius: 1em;
+  --swiper-pagination-bullet-width: 0.5rem;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  --swiper-pagination-bullet-width: 1rem;
 }
 
 .intro__title {
