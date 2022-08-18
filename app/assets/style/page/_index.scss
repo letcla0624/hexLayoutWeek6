@@ -142,8 +142,15 @@
     }
   }
 }
+.add__us {
+  max-width: 966px;
+  .material-icons {
+    font-size: 100px;
+  }
+}
 .bg-slider {
-  background: url(../images/bg_share.jpg) 50% 50% no-repeat;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true)
+    50% 50% no-repeat;
   background-size: cover;
   @include media-breakpoint-up(lg) {
     height: 733px;
@@ -152,11 +159,15 @@
 .slider {
   &__content {
     position: relative;
+    margin: auto;
     max-width: 913px;
+    padding-left: 12px;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 52px;
+    }
   }
   &__img {
     position: relative;
-
     @include media-breakpoint-up(lg) {
       max-width: 525px;
       max-height: 381px;
@@ -173,6 +184,8 @@
       border: 1px solid $white;
       border-radius: 24px;
       z-index: 0;
+      left: 0;
+      bottom: 0;
       left: -8px;
       bottom: -8px;
       @include media-breakpoint-up(lg) {
@@ -194,25 +207,13 @@
     }
   }
   &__controller {
-    margin-top: 32px;
+    margin-top: 24px;
     @include media-breakpoint-up(lg) {
       max-width: 525px;
-      margin-top: 24px;
-    }
-    &__circle {
-      width: 8px;
-      height: 8px;
-      border-radius: 8px;
-      margin-top: 8px;
-      background-color: $primary;
-    }
-    li {
-      height: 24px;
-      &.active {
-        .slider__controller__circle {
-          width: 16px;
-        }
-      }
+      position: absolute;
+      bottom: 0;
+      left: 23%;
+      z-index: 2;
     }
   }
 }
@@ -229,9 +230,27 @@
     top: -50px;
   }
 }
-.add__us {
-  max-width: 966px;
-  .material-icons {
-    font-size: 100px;
+
+.swiper {
+  &-wrapper {
+    height: auto;
+  }
+  &-fade {
+    .swiper-slide {
+      opacity: 0 !important;
+      &.swiper-slide-active {
+        opacity: 1 !important;
+      }
+    }
+  }
+  &-pagination-bullet {
+    background: $primary;
+    opacity: 1;
+    border-radius: 1em;
+    --swiper-pagination-bullet-width: 0.5rem;
+    transition: width 0.3s;
+    &.swiper-pagination-bullet-active {
+      --swiper-pagination-bullet-width: 1rem;
+    }
   }
 }
