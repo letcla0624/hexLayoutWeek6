@@ -6,13 +6,13 @@ if (elem) {
   });
 }
 
-// const buttonsUl_li = document.querySelectorAll(".buttonsUl > li");
-// buttonsUl_li.forEach((e) => {
-//   e.addEventListener("click", function () {
-//     buttonsUl_li.forEach((item) => item.classList.remove("active"));
-//     this.classList.add("active");
-//   });
-// });
+const buttonsUl_li = document.querySelectorAll(".buttonsUl > li");
+buttonsUl_li.forEach((e) => {
+  e.addEventListener("click", function () {
+    buttonsUl_li.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
 
 // const path_name = window.location.pathname.split("/").pop().slice(0, -5);
 // const index = document.querySelector(".index");
