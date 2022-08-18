@@ -5,7 +5,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Noto+Sans+TC:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -16786,8 +16786,8 @@ main {
   }
 }
 
-nav li.active a {
-  color: #62db54;
+.font-Noto {
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .btn:focus,
@@ -16831,6 +16831,33 @@ nav li.active a {
   }
   .navbar-brand img {
     content: url("../images/logo.svg");
+  }
+}
+
+.nav-link {
+  color: #fff;
+}
+
+nav .border-gradient {
+  position: fixed;
+  top: 58px;
+}
+
+@media (min-width: 576px) {
+  nav .border-gradient {
+    top: 65px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav .border-gradient {
+    top: 68px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav .border-gradient {
+    top: 72px;
   }
 }
 
@@ -16918,6 +16945,7 @@ nav li.active a {
 .scroll-class {
   width: 100%;
   overflow-x: scroll;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .buttonsUl li.active .btn {
@@ -16995,16 +17023,10 @@ nav li.active a {
 
 .teachable .card {
   background-color: #1c1c1c;
-  opacity: 0.5;
-}
-
-.teachable .card:hover {
-  background-color: #1c1c1c;
-  border: 1px solid #62db54;
   opacity: 1;
 }
 
-.teachable .card:hover .material-icons {
+.teachable .card .material-icons {
   background: -webkit-gradient(linear, left top, left bottom, from(#09abf6), to(#62db54));
   background: -o-linear-gradient(#09abf6, #62db54);
   background: linear-gradient(#09abf6, #62db54);
@@ -17016,6 +17038,24 @@ nav li.active a {
 @media (min-width: 768px) {
   .teachable .card {
     background-color: #2d2d2d;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .teachable .card .material-icons {
+    color: #fff;
+  }
+  .teachable .card:hover {
+    background-color: #1c1c1c;
+    border: 1px solid #62db54;
+    opacity: 1;
+  }
+  .teachable .card:hover .material-icons {
+    background: -webkit-gradient(linear, left top, left bottom, from(#09abf6), to(#62db54));
+    background: -o-linear-gradient(#09abf6, #62db54);
+    background: linear-gradient(#09abf6, #62db54);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
   }
 }
 
@@ -17347,7 +17387,7 @@ nav li.active a {
   .teacher__class {
     position: absolute;
     max-width: 416px;
-    top: 28%;
+    top: 31%;
     z-index: 2;
   }
   .teacher__class:after {
