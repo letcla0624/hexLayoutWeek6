@@ -13,13 +13,16 @@
   @include media-breakpoint-up(xl) {
     position: absolute;
     max-width: 416px;
-    top: 31%;
+    left: 0;
     z-index: 2;
     &:after {
       left: 100%;
       transform: rotate(-90deg);
       bottom: 49%;
     }
+  }
+  @include media-breakpoint-up(xxl) {
+    left: 5%;
   }
 }
 .join__pad {
@@ -47,13 +50,10 @@
   @include media-breakpoint-up(xl) {
     max-width: 856px;
     position: relative;
-    left: 25%;
     padding: 48px 24px 48px 16%;
   }
   @include media-breakpoint-up(xxl) {
-    max-width: 856px;
-    position: relative;
-    left: 25%;
+    left: 13%;
     padding: 48px 24px 48px 10%;
   }
 }
