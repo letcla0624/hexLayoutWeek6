@@ -2848,7 +2848,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
-  background-color: transparent;
+  background-color: #1c1c1c;
   background-clip: padding-box;
   border: 1px solid #c1c1c1;
   -webkit-appearance: none;
@@ -2880,7 +2880,7 @@ progress {
 
 .form-control:focus {
   color: #fff;
-  background-color: transparent;
+  background-color: #1c1c1c;
   border-color: #62db54;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
@@ -3050,7 +3050,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
-  background-color: transparent;
+  background-color: #1c1c1c;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -3141,7 +3141,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: transparent;
+  background-color: #1c1c1c;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -16967,7 +16967,7 @@ nav .border-gradient {
   position: absolute;
   content: "";
   width: 100%;
-  border: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   left: 50%;
   z-index: -1;
 }
@@ -16976,7 +16976,7 @@ nav .border-gradient {
   position: absolute;
   content: "";
   width: 100%;
-  border: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   left: 50%;
   z-index: -1;
   border-color: #62db54;
@@ -17387,7 +17387,7 @@ nav .border-gradient {
   .teacher__class {
     position: absolute;
     max-width: 416px;
-    top: 31%;
+    left: 0;
     z-index: 2;
   }
   .teacher__class:after {
@@ -17396,6 +17396,12 @@ nav .border-gradient {
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
     bottom: 49%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .teacher__class {
+    left: 5%;
   }
 }
 
@@ -17435,16 +17441,13 @@ nav .border-gradient {
   .join__pad {
     max-width: 856px;
     position: relative;
-    left: 25%;
     padding: 48px 24px 48px 16%;
   }
 }
 
 @media (min-width: 1400px) {
   .join__pad {
-    max-width: 856px;
-    position: relative;
-    left: 25%;
+    left: 13%;
     padding: 48px 24px 48px 10%;
   }
 }
