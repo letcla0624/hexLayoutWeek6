@@ -1,0 +1,11 @@
+.payflow {
+  &:after {
+    @include pay-flow;
+  }
+  &__finished {
+    &:after {
+      @include pay-flow;
+      border-color: $primary;
+    }
+  }
+}

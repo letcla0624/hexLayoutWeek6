@@ -3,7 +3,6 @@
   background-clip: text;
   color: transparent;
 }
-
 @mixin overlay-hover {
   .bar {
     width: 70px;
@@ -21,7 +20,6 @@
     opacity: 0;
   }
 }
-
 @mixin pay-flow {
   position: absolute;
   content: "";
@@ -30,9 +28,11 @@
   left: 50%;
   z-index: -1;
 }
-
 @mixin btn-active {
   color: $primary;
   border-color: $primary;
   background-color: transparent;
+}
+@mixin font-Noto {
+  font-family: "Noto Sans TC", sans-serif;
 }

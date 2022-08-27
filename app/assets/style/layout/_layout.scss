@@ -1,29 +1,3 @@
-$gradient-btn: linear-gradient(to right, $info, $primary);
-$gradient-text: linear-gradient($info, $primary);
-$gradient-line: linear-gradient(to left, $info 50%, $primary 50%);
-$cubeWidth: 10px;
-$cubePosition: calc(-10px / 2);
-
-.font-Noto {
-  font-family: "Noto Sans TC", sans-serif;
-}
-.btn:focus,
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-.btn-gradient {
-  background: $gradient-btn;
-  border: none;
-  color: $white;
-}
-.border-gradient {
-  width: 100%;
-  height: 2px;
-  background: $gradient-line;
-}
-.text-gradient {
-  @include text-gradient;
-}
 .navbar-brand {
   width: 24px;
   @include media-breakpoint-up(md) {
@@ -51,52 +25,6 @@ nav {
     }
   }
 }
-
-.cube {
-  position: absolute;
-  width: $cubeWidth;
-  height: $cubeWidth;
-  &__lt {
-    left: $cubePosition;
-    top: $cubePosition;
-  }
-  &__rt {
-    right: $cubePosition;
-    top: $cubePosition;
-  }
-  &__lb {
-    left: $cubePosition;
-    bottom: $cubePosition;
-  }
-  &__rb {
-    right: $cubePosition;
-    bottom: $cubePosition;
-  }
-}
-.w-20px {
-  width: 20px;
-}
-.h-20px {
-  height: 20px;
-}
-.w-24px {
-  width: 24px;
-}
-.w-32px {
-  width: 32px;
-}
-.h-32px {
-  height: 32px;
-}
-.w-50px {
-  width: 50px;
-}
-.w-100px {
-  width: 100px;
-}
-.h-100px {
-  height: 100px;
-}
 .ellipsis {
   overflow: hidden;
   display: -webkit-box;
@@ -109,16 +37,10 @@ nav {
     -webkit-line-clamp: 3;
   }
 }
-.z-index-0 {
-  z-index: 0;
-}
-.z-index-1 {
-  z-index: 1;
-}
 .scroll-class {
   width: 100%;
   overflow-x: scroll;
-  font-family: "Noto Sans TC", sans-serif;
+  @include font-Noto;
 }
 .buttonsUl {
   li.active {
@@ -131,20 +53,6 @@ nav {
   &:hover {
     outline: 1px solid $primary;
     border-radius: 24px;
-  }
-}
-.z-index-up {
-  z-index: 1;
-}
-.payflow {
-  &:after {
-    @include pay-flow;
-  }
-  &__finished {
-    &:after {
-      @include pay-flow;
-      border-color: $primary;
-    }
   }
 }
 .other__login {
@@ -162,7 +70,4 @@ nav {
     z-index: 1;
     width: fit-content;
   }
-}
-.btn-close {
-  top: 4px;
 }

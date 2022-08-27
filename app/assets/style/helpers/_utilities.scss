@@ -1,0 +1,46 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                "20px": 20px,
+                "24px": 24px,
+                "32px": 32px,
+                "50px": 50px,
+                "100px": 100px,
+              )
+            ),
+        )
+      ),
+    "height":
+      map-merge(
+        map-get($utilities, "height"),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "height"), "values"),
+              (
+                "20px": 20px,
+                "32px": 32px,
+                "100px": 100px,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+.z-index-0 {
+  z-index: 0;
+}
+.z-index-1 {
+  z-index: 1;
+}

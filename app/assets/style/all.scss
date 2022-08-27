@@ -2,9 +2,19 @@
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "./helpers/mixin";
+@import "./helpers/utilities";
+@import "../../../node_modules/bootstrap/scss/utilities/api";
 
 @import "./layout/base";
+@import "./layout/setting";
 @import "./layout/layout";
+
+@import "./components/cube-border";
+@import "./components/swiper";
+@import "./components/hover-border";
+@import "./components/datepicker";
+@import "./components/payflow";
+
 @import "./page/index";
 @import "./page/class-intro";
 @import "./page/join-class";

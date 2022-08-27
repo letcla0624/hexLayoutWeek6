@@ -1,0 +1,24 @@
+$cubeWidth: 10px;
+$cubePosition: calc(-10px / 2);
+
+.cube {
+  position: absolute;
+  width: $cubeWidth;
+  height: $cubeWidth;
+  &__lt {
+    left: $cubePosition;
+    top: $cubePosition;
+  }
+  &__rt {
+    right: $cubePosition;
+    top: $cubePosition;
+  }
+  &__lb {
+    left: $cubePosition;
+    bottom: $cubePosition;
+  }
+  &__rb {
+    right: $cubePosition;
+    bottom: $cubePosition;
+  }
+}

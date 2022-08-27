@@ -62,13 +62,3 @@
     background-color: $black;
   }
 }
-.datepicker-controls {
-  button {
-    border: none;
-    background-color: transparent;
-  }
-}
-.datepicker-cell.selected,
-.datepicker-cell.selected:hover {
-  background-color: $primary;
-}

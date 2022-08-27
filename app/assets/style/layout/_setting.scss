@@ -1,0 +1,27 @@
+$gradient-btn: linear-gradient(to right, $info, $primary);
+$gradient-text: linear-gradient($info, $primary);
+$gradient-line: linear-gradient(to left, $info 50%, $primary 50%);
+
+.font-Noto {
+  @include font-Noto;
+}
+.btn:focus,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.btn-gradient {
+  background: $gradient-btn;
+  border: none;
+  color: $white;
+}
+.border-gradient {
+  width: 100%;
+  height: 2px;
+  background: $gradient-line;
+}
+.text-gradient {
+  @include text-gradient;
+}
+.btn-close {
+  top: 4px;
+}
